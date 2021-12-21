@@ -1,0 +1,138 @@
+body {
+	background: white;
+	font: {
+		family: $font--heading;
+		size: 85%;
+	}
+	letter-spacing: -0.45px;
+	color: $gray;
+	text-rendering: optimizeLegibility;
+	-webkit-font-smoothing: antialiased;
+
+	overflow-x: hidden;
+
+	@include small { font-size: 90%; }
+	@include medium { font-size: 95%; }
+	@include large { font-size: 100%; }
+}
+
+* {
+	transition: 0.25s;
+}
+
+h1 {
+	font: {
+		// family: $font--heading;
+		family: $font--monospace;
+		size: 1.5em;
+		// weight: 700;
+	}
+	color: $maroon;
+	line-height: 1.15;
+
+	margin-bottom: 1.25rem;
+}
+
+h2 {
+	font: {
+		// family: $font--heading;
+		family: $font--monospace;
+		size: 1.75em;
+	}
+	color: $maroon;
+	line-height: 1.15;
+
+	margin-bottom: 1rem;
+}
+
+a  {
+	color: $maroon;
+	text-decoration: underline;
+
+	&:hover, &:focus {
+		color: rgba($maroon, 0.6);
+	}
+	&:active {
+		color: $gray;
+	}
+}
+
+p {
+	hyphens: auto;
+	word-break: break-word;
+
+	font-size: 1.25em;
+	margin-bottom: 1rem;
+	line-height: 1.6;
+
+	max-width: 40rem;
+}
+
+ul, ol {
+	font-size: 1.25em;
+	margin-bottom: 1rem;
+	line-height: 1.6;
+	list-style-image: url(../img/round.svg);
+}
+
+blockquote {
+	padding: 0 2rem;
+	margin: 2rem 0;
+	font-size: 120%;
+	color: #666;
+	border-left: 5px solid #999;
+}
+
+p.lead {
+	font: {
+		family: $font--body;
+		size: 2.125em;
+	}
+	line-height: 1.4;
+	// color: $maroon;
+	color: $gray;
+	margin-bottom: 2rem;
+}
+
+a.button {
+	border-radius: 10px;
+	padding: 1.25rem;
+	display: inline-block;
+	transition: 0.185s;
+	text-decoration: none;
+
+	background: $maroon;
+	font: {
+		family: $font--heading;
+		weight: 700;
+		size: 1.325rem;
+	}
+	color: $pink--light;
+	// box-shadow: 5px 5px 0 $pink--dark;
+	box-shadow: 5px 5px 0 rgba($maroon, 0.5);
+
+	&:hover, &:focus {
+		background: darken($maroon, 5%);
+		box-shadow: 5px 5px 0 darken($pink--dark, 5%);
+	}
+
+	&:active {
+		transform: translate(5px, 5px);
+		box-shadow: none;
+	}
+}
+
+.post {
+	padding-bottom: 2rem;
+	margin-bottom: 2.5rem;
+	border-bottom: 1px dotted $maroon;
+}
+
+header {
+	color: #555;
+	font-family: $font--monospace;
+	font-size: 0.85rem;
+	margin-bottom: 3rem;
+	padding-bottom: 2rem;
+	border-bottom: 1px solid #999;
+}

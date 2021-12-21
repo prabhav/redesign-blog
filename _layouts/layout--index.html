@@ -1,0 +1,29 @@
+---
+layout: default
+---
+
+<div class="post-container padded--outer">
+
+        <header>
+            <h1>Redesigning <a href="http://prabhavkhandelwal.com">prabhavkhandelwal.com</a></h1>
+
+            {{ content }}
+        </header>
+
+    <!-- <p>Prabhav Khandelwal makes websites and stuff.</p> -->
+
+    {% for post in site.news reversed %}
+        <div class="post">
+            <!-- <a href="{{ post.url }}"> -->
+                <h2>{{ post.title }}</h2>    
+            <!-- </a> -->
+            
+            <!-- <a href="{{ post.url }}"><img src="{{ post.banner-image }}" alt=""></a> -->
+            <p>{{ post.content }}</p>
+        </div>
+        
+    {% endfor %}
+
+</div>
+        
+    
